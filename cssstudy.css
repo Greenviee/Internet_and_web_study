@@ -1,0 +1,23 @@
+p {
+    font-size: 20px;
+    color: greenyellow;
+    background-color: magenta;
+}
+
+.city {
+    background-color: tomato;
+    color: white;
+    border: 2px solid black;
+    margin: 20px;
+    padding: 20px;
+    font: italic blod 20px sans-serif;
+}
+
+#list {
+    background-color: mistyrose;
+}
+
+li:hover {
+    background-color: yellowgreen;
+    cursor: wait;
+}
