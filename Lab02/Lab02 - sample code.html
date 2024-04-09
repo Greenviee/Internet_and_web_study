@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Lab 02 - CSS (part1)</title>
+	<!-- ---------------------------------------------- -->
+	<style>
+		body {
+			font-family: Verdana, Geneva, Tahoma, sans-serif;
+			background-color: gray;
+			margin: 0px 30px 0px 30px;
+		}
+
+		h1 {
+			text-align: center;
+			color: yellow;
+			text-shadow: 2px 2px 3px blue;
+		}
+
+		h2 {
+			color: blue;
+			text-align: left;
+		}
+
+		hr {
+			border: 3px solid yellow;
+		}
+
+		span {
+			color: red;
+			width: border;
+		}
+
+		#p1:hover {
+			background-color: yellow;
+		}
+
+		#p2:hover {
+			background-color: greenyellow;
+		}
+
+		div {
+			width: 100px;
+			height: 140px;
+			background-image: url("media/cards/back.png");
+			background-size: 100px 140px;
+		}
+
+		div#img:hover {
+			background-image: url("media/cards/Playing_card_club_7.svg");
+		}
+
+		div#img2:hover {
+			background-image: url("media/cards/Playing_card_spade_3.svg");
+		}
+
+		div#img3:hover {
+			background-image: url("media/cards/Playing_card_diamond_10.svg");
+		}
+
+		div#img4:hover {
+			background-image: url("media/cards/Playing_card_spade_A.svg");
+		}
+
+		img:hover {
+			box-shadow: 0px 0px 10px blue;
+		}
+	</style>
+	<!-- ---------------------------------------------- -->
+</head>
+
+<body>
+	<!-- ---------------------------------------------- -->
+	<h1>Playing Blackjack</h1>
+	<!-- ---------------------------------------------- -->
+	<hr>
+	<!-- ---------------------------------------------- -->
+	<h2>1. Game and rule</h2>
+	<p id="p1">
+		<em><span>Blackjack</span> (formerly Black Jack and Vingt-Un) is a casino banking game. It is the most
+			widely played casino banking game in the world. It uses decks of 52 cards and descends from a global
+			family of casino banking games known as Twenty-One. This family of card games also includes the European
+			games Vingt-et-Un and Pontoon, and the Russian game Ochko. Blackjack players do not compete against each
+			other. The game is a comparing card game where each player competes against the dealer.</em>
+	</p>
+	<p id="p2">
+		<em>The object of the game is to win money by creating card totals higher than those of the dealer's hand
+			but <span>not exceeding 21</span>, or by stopping at a total in the hope that the dealer will bust. On
+			their turn, players choose to "hit" (take a card), "stand" (end their turn and stop without taking a
+			card), "double" (double their wager, take a single card, and finish), "split" (if the two cards have the
+			same value, separate them to make two hands), or "surrender" (give up a half-bet and retire from the
+			game).</em>
+	</p>
+	<hr>
+	<center>
+		<h2>2. Sample Game</h2>
+		<table>
+			<tr>
+				<th></th>
+				<th>1st hand</th>
+				<th>2nd hand</th>
+				<th></th>
+			</tr>
+			<tr>
+				<td style="color: red;">Dealer</td>
+				<td>
+					<div id="img"></div>
+				</td>
+				<td>
+					<div id="img2"></div>
+				</td>
+				<td>Dealer's hands: move mouse cursor over each card <br>to see the card face</td>
+			</tr>
+			<tr>
+				<td style="color: blue;">Dealer</td>
+				<td>
+					<div id="img3"></div>
+				</td>
+				<td>
+					<div id="img4"></div>
+				</td>
+				<td>Player's hands: move mouse cursor over each card <br>to see the card face</td>
+			</tr>
+
+		</table>
+	</center>
+	<!-- ---------------------------------------------- -->
+	<hr>
+	<!-- ---------------------------------------------- -->
+	<center>
+		<h2>3. Online resources</h2>
+		<table>
+			<tr>
+				<td><iframe src="" frameborder="0" width="200px" height="700px">
+						<a href="media/websites/daum.png"></a>
+					</iframe></td>
+				<td><iframe src="" frameborder="0" width="500px" height="700px"></iframe></td>
+			</tr>
+		</table>
+	</center>
+	<!-- ---------------------------------------------- -->
+	<hr>
+	<!-- ---------------------------------------------- -->
+	<center>
+		<table>
+			<td><img src="media/PNU.png" alt="" width="60px" height="60px"></td>
+			<td>
+				김진우<br>정보컴퓨터공학부<br>Pusan National University
+			</td>
+		</table>
+	</center>
+	<!-- ---------------------------------------------- -->
+</body>
+
+</html>
