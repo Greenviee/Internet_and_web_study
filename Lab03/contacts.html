@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: white;
+        }
+
+        input[type=text]:hover {
+            background-color: aqua;
+        }
+
+        input[type=email]:hover {
+            background-color: aqua;
+        }
+
+        #tarea:hover {
+            background-color: aqua;
+        }
+
+        input[type=text]:focus {
+            background-color: aqua;
+            color: red;
+            font-size: 150%;
+        }
+
+        input[type=email]:focus {
+            background-color: aqua;
+            color: red;
+            font-size: 150%;
+        }
+
+        #tarea:focus {
+            background-color: aqua;
+            color: red;
+            font-size: 150%;
+        }
+
+        #submitbt {
+            position: relative;
+            left: 80px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        Name : <input type="text" placeholder="your name here"> <br>
+        Company : <input id="company" type="text" placeholder="your company here"> <br>
+        Email : <input type="email" placeholder="id@host"> <br>
+        <textarea id="tarea" cols="30" rows="10"></textarea> <br>
+        <button id="submitbt">submit</button>
+    </div>
+</body>
+
+</html>
