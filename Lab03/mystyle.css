@@ -1,0 +1,54 @@
+ul#myMenu>li {
+    display: inline-block;
+    width: 200px;
+    position: relative;
+}
+
+ul#myMenu>li ul {
+    display: none;
+    position: absolute;
+}
+
+ul#myMenu>li:hover ul {
+    display: block;
+}
+
+h1 {
+    text-align: center;
+    color: orange;
+    text-shadow: 2px 2px 3px blue;
+}
+
+.menu {
+    width: 100%;
+    overflow: hidden;
+    margin: 150px auto;
+}
+
+.menu>li {
+    width: 33%;
+    float: left;
+    text-align: center;
+    line-height: 40px;
+    background-color: gray;
+    list-style-type: none;
+}
+
+.menu a {
+    color: white;
+}
+
+.submenu>li {
+    line-height: 50px;
+    background-color: gray;
+}
+
+.submenu {
+    height: 0;
+    overflow: hidden;
+}
+
+.menu>li:hover .submenu {
+    height: 100px;
+    list-style-type: none;
+}
