@@ -1,0 +1,120 @@
+<!DOCTYPE html PUBLIC>
+<html>
+
+<head>
+    <meta charset="EUC-KR">
+    <title>Assignment 6: sample code</title>
+    <style>
+        table {
+            height: 400px;
+            width: 600px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        td {
+            height: 200px;
+            width: 200px;
+            border: 1px solid black;
+        }
+
+        td:hover {
+            background-color: yellow;
+        }
+    </style>
+    <script>
+        function seehelp() {
+            alert("Do your best!");
+        }
+        function calc1() {
+            let msg = document.getElementById("calculate1");
+
+            msg.innerHTML = 30
+        }
+        function calc2() {
+            let msg = document.getElementById("calculate2");
+
+            msg.innerHTML = 200
+        }
+        function calcs() {
+            let c1 = document.getElementById("calculate1");
+            let c2 = document.getElementById("calculate2");
+            let c3 = document.getElementById("calcsum")
+
+            if (c1.innerHTML == "30" && c2.innerHTML == "200") {
+                c3.innerHTML = "Sum is 30, and mult is 200"
+            }
+            else if (c1.innerHTML == "30") {
+                c3.innerHTML = "Sum is 30"
+            }
+            else if (c2.innerHTML == "200") {
+                c3.innerHTML = "Mult is 200"
+            }
+            else {
+                c3.innerHTML = "(none)"
+            }
+        }
+        function myname() {
+            let msg = document.getElementById("placeForMyname");
+
+            let answer = prompt("Enter your name", "Jane John Doe");
+            if (answer == null) {
+                msg.innerHTML = "Cancelled or closed";
+            }
+            else {
+                msg.innerHTML = answer;
+            }
+        }
+        function myhobby() {
+            let msg = document.getElementById("placeForMyhobby");
+
+            let answer = prompt("Enter your hobby", "Fishing");
+            if (answer == null) {
+                msg.innerHTML = "Cancelled or closed";
+            }
+            else {
+                msg.innerHTML = answer;
+            }
+        }
+        function intros() {
+            let c1 = document.getElementById("placeForMyname");
+            let c2 = document.getElementById("placeForMyhobby");
+            let c3 = document.getElementById("introsum")
+
+            if (c1.innerHTML == "Jane John Doe" && c2.innerHTML == "Fishing") {
+                c3.innerHTML = "My name is Jane John Doe, and my hobby is Fishing"
+            }
+            else if (c1.innerHTML == "Jane John Doe") {
+                c3.innerHTML = "My name is Jane John Doe"
+            }
+            else if (c2.innerHTML == "Fishing") {
+                c3.innerHTML = "My hobby is Fishing"
+            }
+            else {
+                c3.innerHTML = "(none)"
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Tables and JavaScript Dialogs</h1>
+    <hr>
+    <button onclick="seehelp()">See help!</button>
+    <table>
+        <tr>
+            <td>10 + 20 = ?
+                <div id="calculate1">??</div><button onclick="calc1()">Calculate 1</button>
+            </td>
+            <td>10 x 20 = ? <div id="calculate2">??</div><button onclick="calc2()">Calculate 2</button></td>
+            <td>Calc Summary:<div id="calcsum">??</div><button onclick="calcs()">Summarize</button></td>
+        </tr>
+        <tr>
+            <td>My name is : <div id="placeForMyname">??</div><button onclick="myname()">Answer 3</button></td>
+            <td>My hobby is : <div id="placeForMyhobby">??</div><button onclick="myhobby()">Answer 4</button></td>
+            <td>Intro Summary:<div id="introsum">??</div><button onclick="intros()">Summarize</button></td>
+        </tr>
+    </table>
+</body>
+
+</html>
