@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <style>
+        table,
+        td,
+        tr {
+            border: 1px solid black;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <hr>
+    <form>
+        Enter a book title :
+        <input type="text" id="book-title" size="20">
+        <input type="button" onclick="getUserInput()" value="click to confirm"> <br>
+        How many items to display :
+        <select id="book-count">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+        </select>
+        <input type="button" onclick="getBookCount()" value="click to confirm">
+    </form>
+    <hr>
+    <form>
+        User-entered book title :
+        <span id="bookTitle" style="background-color: yellow;"></span> <br>
+        Number of items to display :
+        <span id="bookCount" style="background-color: yellow;"></span>
+    </form>
+    <hr>
+    <input type="button" onclick="sendQuery()" value="send Query">
+    <hr>
+
+    <table id="bookshelf">
+        <tr id="first">
+            <td>-0-</td>
+            <td id="bookTitleDisplay1">1</td>
+            <td id="bookImageDisplay1">2</td>
+        </tr>
+        <tr id="second">
+            <td>-1-</td>
+            <td id="bookTitleDisplay2">3</td>
+            <td id="bookImageDisplay2">4</td>
+        </tr>
+        <tr id="third">
+            <td>-2-</td>
+            <td id="bookTitleDisplay3">5</td>
+            <td id="bookImageDisplay3">6</td>
+        </tr>
+    </table>
+
+    <span id="testing">1111</span>
+    <script src="Lab08.js"></script>
+</body>
+
+</html>
