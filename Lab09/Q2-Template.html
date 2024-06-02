@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>[Q2] String matching</title>
+	<style>
+		body {
+			font-family: 'Courier New', Courier, monospace;
+			font-size: 20px;
+		}
+
+		#colored {
+			color: red;
+		}
+	</style>
+</head>
+
+<body>
+	<h3>[Q2] String matching</h3>
+	Enter a sentence (or a long word) and a short word.
+	Then, find the earliest match!</h3>
+	<hr>
+
+	<button onclick="getSentence()">Enter a sentence</button>
+	<button onclick="getWord()">Enter a word</button>
+	<button onclick="findMatch()">Find the first match</button>
+	<div id="sentence">Sentence : ?</div>
+	<div id="word">Searching word : ?</div>
+	<div id="index">Result (index) : ?</div>
+	<div id="coloring">Result (coloring) : <span id="not_color1">?</span><span id="colored"></span><span
+			id="not_color2"></span></div>
+	<script>
+		let sentence = "";
+		let word = "";
+
+		function getSentence() {
+			sentence = prompt("Enter a sentence or a long word", "Hello");
+			document.getElementById("sentence").innerHTML = "Sentence : " + sentence;
+		}
+
+		function getWord() {
+			word = prompt("Enter a short word", "ell");
+			document.getElementById("word").innerHTML = "Searching word : " + word;
+		}
+
+		function findMatch() {
+			var ind = sentence.indexOf(word)
+			if (ind != -1) {
+				document.getElementById('index').innerHTML = "Result (index) : " + ind;
+			}
+			document.getElementById('not_color1').innerHTML = sentence.substring(0, ind);
+			document.getElementById('colored').innerHTML = sentence.substring(ind, ind + word.length);
+			document.getElementById('not_color2').innerHTML = sentence.substring(ind + word.length);
+
+		}
+
+		// you'll find the 'substr' function useful
+		// sentence.substr(from_index, how_many) 
+
+	</script>
+</body>
+
+</html>
