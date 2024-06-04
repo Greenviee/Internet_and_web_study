@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>Questions and Answers</title>
+</head>
+
+<body id="parent">
+	<h3>[Q2] Dynamically adding answers</h3>
+	<hr>
+	<div>
+		<p>Q) Octopuses have multiple hearts. Yes or No?</p>
+		<button onclick="addAnswer(q1, 'Yes, it has three.' )">Click to see the answer</button>
+		<div id="q1" style="margin: 10px 0;"></div>
+	</div>
+	<hr>
+	<div>
+		<p>Q) Which company makes the most tires each year?</p>
+		<button onclick="addAnswer(q2, 'Lego')">Click here to see the answer</button>
+		<div id="q2" style="margin: 10px 0;"></div>
+	</div>
+	<script>
+		function addAnswer(obj, text) {
+			let newDiv = document.createElement("div");
+			newDiv.innerHTML = text;
+			obj.appendChild(newDiv);
+		}
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>My Wish List</title>
+</head>
+
+<body id="parent">
+    <h3>[Q3] My wish list</h3>
+    <hr>
+    <div>
+        <p onclick="addCountry()">Cities to visit: (click here to add a new city)</p>
+        <ul style="background-color: gray;" id="wishlist">
+            <li>Busan, South Korea (not allowed to edit or remove)</li>
+            <li>Seoul, South Korea <button onclick="editCountry(this)">Edit</button> <button
+                    onclick="deleteCountry(this)">Remove</button></li>
+        </ul>
+    </div>
+    <hr>
+    <script>
+        function addCountry() {
+            obj = document.getElementById("wishlist");
+            let text = prompt("Enter the name of the city:", "");
+            if (text == null || text == "") return;
+            let newli = document.createElement("li");
+            newli.innerHTML = text + " <button onclick=\"editCountry(this)\">Edit</button>" + " <button onclick=\"deleteCountry(this)\">Remove</button>";
+            obj.appendChild(newli);
+        }
+        function editCountry(obj) {
+            let toedit = obj.parentElement;
+            let text = prompt("Enter the name of the city:", "");
+            toedit.innerHTML = text + " <button onclick=\"editCountry(this)\">Edit</button>" + " <button onclick=\"deleteCountry(this)\">Remove</button>";
+        }
+        function deleteCountry(obj) {
+            let todel = obj.parentElement;
+            let p = todel.parentElement;
+            p.removeChild(todel);
+        }
+    </script>
+</body>
+
+</html>

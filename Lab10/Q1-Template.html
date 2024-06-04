@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>My wish list</title>
+
+</head>
+
+<body>
+	<h3>[Q1] My wish list: cities to visit</h3>
+	<h4>(click on the green area to add an item).</h4>
+	<hr>
+	<ul style="background-color:yellowgreen" onclick="addItem(this)" id="country">
+		<li>Busan, South Korea</li>
+	</ul>
+	<script>
+		function addItem(parent) {
+			let obj = document.getElementById("country");
+			let text = prompt("Enter the name of the city:", "");
+			if (text == null || text == "") return;
+			let newli = document.createElement("li");
+			newli.innerHTML = text;
+			newli.setAttribute("id", "country");
+			obj.appendChild(newli);
+		}
+	</script>
+</body>
+
+</html>
